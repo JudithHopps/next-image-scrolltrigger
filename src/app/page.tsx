@@ -136,6 +136,10 @@ export default function Home() {
     ));
   };
 
+  const handleButton = () => {
+    window.open("https://open.kakao.com/o/s55Y2G6g", "_blank");
+  };
+
   return (
     <ReactLenis root>
       <div className="main-intro" ref={introRef}>
@@ -168,22 +172,24 @@ export default function Home() {
 
           <div className="copy">
             <div className="line">
-              <p>후라이를 한 번 팔아볼까...? 연탄불에 후라이!</p>
-            </div>
-            <div className="line">
               <p>
-                오픈하자마자 <span className="bold">웨이팅 3시간!!</span>
+                후라이를 한 번 팔아볼까...?{" "}
+                <span className="text-brown">연탄불에 후라이!</span>
               </p>
             </div>
             <div className="line">
               <p>
-                홈쇼핑 <span className="red">최단 시간 매진!!!!</span>{" "}
+                오픈하자마자{" "}
+                <span className="text-bold">
+                  웨이팅 <span className="text-black">3시간!!</span>
+                </span>
               </p>
             </div>
-          </div>
-
-          <div className="btn">
-            <button>Get Pro</button>
+            <div className="line">
+              <p style={{ fontSize: 30 }}>
+                홈쇼핑 <span className="text-red">최단 시간 매진!!!!</span>{" "}
+              </p>
+            </div>
           </div>
         </div>
 
@@ -191,9 +197,9 @@ export default function Home() {
       </section>
 
       <section className="footer">
-        <Link href="codegrid.gumroad.com/l/codegridpro">
-          Link in description
-        </Link>
+        <div className="btn">
+          <button onClick={handleButton}>문의하기</button>
+        </div>
       </section>
     </ReactLenis>
   );
