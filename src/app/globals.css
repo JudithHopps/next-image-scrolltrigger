@@ -74,11 +74,20 @@ section {
 .footer {
   height: 50vh;
   align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.footer a {
-  font-size: 4vw;
-  color: #fff;
+.footer h1 {
+  font-size: 32px;
+  color: #000;
+}
+
+.footer button {
+  margin-bottom: 16px;
 }
 
 .main {
