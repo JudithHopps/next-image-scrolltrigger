@@ -136,6 +136,10 @@ export default function Home() {
     ));
   };
 
+  const handleButton = () => {
+    window.open("https://open.kakao.com/o/s55Y2G6g", "_blank");
+  };
+
   return (
     <ReactLenis root>
       <div className="main-intro" ref={introRef}>
@@ -151,30 +155,41 @@ export default function Home() {
 
       <section className="hero">
         <div className="img">
-          <Image src="/pro.png" alt="logo" fill />
+          <Image
+            src="/main.png"
+            alt="main"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
       </section>
 
       <section className="main">
         <div className="main-content">
           <div className="logo">
-            <Image src="/file.ㄴsvg" alt="logo" fill />
+            <Image src="/egg.png" alt="logo" fill />
           </div>
 
           <div className="copy">
             <div className="line">
-              <p>Delve into coding without clutter.</p>
+              <p>
+                후라이를 한 번 팔아볼까...?{" "}
+                <span className="text-brown">연탄불에 후라이!</span>
+              </p>
             </div>
             <div className="line">
-              <p>One subscription. Endless web design.</p>
+              <p>
+                오픈하자마자{" "}
+                <span className="text-bold">
+                  웨이팅 <span className="text-black">3시간!!</span>
+                </span>
+              </p>
             </div>
             <div className="line">
-              <p>Take the fast lane to mastery.</p>
+              <p style={{ fontSize: 30 }}>
+                홈쇼핑 <span className="text-red">최단 시간 매진!!!!</span>{" "}
+              </p>
             </div>
-          </div>
-
-          <div className="btn">
-            <button>Get Pro</button>
           </div>
         </div>
 
@@ -182,9 +197,9 @@ export default function Home() {
       </section>
 
       <section className="footer">
-        <Link href="codegrid.gumroad.com/l/codegridpro">
-          Link in description
-        </Link>
+        <div className="btn">
+          <button onClick={handleButton}>문의하기</button>
+        </div>
       </section>
     </ReactLenis>
   );

@@ -68,8 +68,7 @@ section {
   height: 100vh;
 }
 .hero .img {
-  width: 50%;
-  aspect-ratio: 1;
+  /* object-fit: contain;/ */
 }
 
 .footer {
@@ -118,12 +117,13 @@ section {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 2px solid #fff;
   border-radius: 100%;
   overflow: hidden;
-  transform: scale(0);
+  /* transform: scale(0); */
+  background-color: #fff;
 }
 
 .copy {
@@ -153,6 +153,7 @@ button {
   padding: 1em 2em;
   font-size: 18px;
   color: #fff;
+  cursor: pointer;
   border: 2px solid #fff;
   border-radius: 8em;
   background: none;
@@ -166,4 +167,72 @@ button {
     width: 50%;
     height: 240px;
   }
+}
+
+/* 텍스트 스타일 */
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+/* 색상 클래스 */
+.text-red {
+  color: red;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.text-brown {
+  color: brown;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+/* 배경 색상 클래스 */
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-brown {
+  background-color: brown;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+/* 추가 유틸리티 */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
