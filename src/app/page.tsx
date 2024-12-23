@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,7 +10,51 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const introRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    if (introRef.current) {
+      const introTimeline = gsap.timeline();
+
+      /* bounce */
+      introTimeline
+        .to(".main-intro .egg", {
+          rotation: 10, // 왼쪽으로 기울기
+          duration: 0.2,
+          ease: "power1.inOut",
+        })
+        .to(".main-intro .egg", {
+          rotation: -10, // 오른쪽으로 기울기
+          repeat: 3, // 3번 반복
+          yoyo: true,
+          duration: 0.4,
+          ease: "power1.inOut",
+        })
+        .to(introRef.current, {
+          y: "-100%", // 위로 사라짐
+          duration: 1,
+          ease: "power2.inOut",
+        });
+      /* 풍선 */
+      // introTimeline
+      //   .to(".main-intro img", {
+      //     y: -200, // 위로 천천히 올라가기
+      //     scale: 1.2, // 살짝 커지기
+      //     duration: 1,
+      //     ease: "power1.in",
+      //   })
+      //   .to(".main-intro img", {
+      //     opacity: 0, // 사라지기
+      //     duration: 0.5,
+      //     ease: "power1.out",
+      //   })
+      //   .to(introRef.current, {
+      //     y: "-100%", // 섹션 전체가 위로 사라짐
+      //     duration: 1,
+      //     ease: "power2.inOut",
+      //   });
+    }
+
     const ScrollTriggerSettings = {
       trigger: ".main",
       start: "top 25%",
@@ -83,10 +127,10 @@ export default function Home() {
     return Array.from({ length: 3 }, (_, i) => (
       <div className="row" key={i}>
         <div className="card card-left">
-          <Image src={`/img-${2 * i + 1}.png`} alt="img" fill />
+          <Image src={`/${2 * i + 1}.png`} alt="img" fill />
         </div>
         <div className="card card-right">
-          <Image src={`/img-${2 * i + 2}.png`} alt="img" fill />
+          <Image src={`/${2 * i + 2}.png`} alt="img" fill />
         </div>
       </div>
     ));
@@ -94,6 +138,17 @@ export default function Home() {
 
   return (
     <ReactLenis root>
+      <div className="main-intro" ref={introRef}>
+        <div className="image-wrapper egg">
+          <Image
+            src="/egg.png"
+            alt="egg"
+            layout="fill"
+            className="responsive-image egg"
+          />
+        </div>
+      </div>
+
       <section className="hero">
         <div className="img">
           <Image src="/pro.png" alt="logo" fill />
@@ -103,7 +158,7 @@ export default function Home() {
       <section className="main">
         <div className="main-content">
           <div className="logo">
-            <Image src="/file.svg" alt="logo" fill />
+            <Image src="/file.ㄴsvg" alt="logo" fill />
           </div>
 
           <div className="copy">
