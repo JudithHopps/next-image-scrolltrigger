@@ -151,25 +151,34 @@ export default function Home() {
 
       <section className="hero">
         <div className="img">
-          <Image src="/pro.png" alt="logo" fill />
+          <Image
+            src="/main.png"
+            alt="main"
+            fill
+            style={{ objectFit: "contain" }}
+          />
         </div>
       </section>
 
       <section className="main">
         <div className="main-content">
           <div className="logo">
-            <Image src="/file.ㄴsvg" alt="logo" fill />
+            <Image src="/egg.png" alt="logo" fill />
           </div>
 
           <div className="copy">
             <div className="line">
-              <p>Delve into coding without clutter.</p>
+              <p>후라이를 한 번 팔아볼까...? 연탄불에 후라이!</p>
             </div>
             <div className="line">
-              <p>One subscription. Endless web design.</p>
+              <p>
+                오픈하자마자 <span className="bold">웨이팅 3시간!!</span>
+              </p>
             </div>
             <div className="line">
-              <p>Take the fast lane to mastery.</p>
+              <p>
+                홈쇼핑 <span className="red">최단 시간 매진!!!!</span>{" "}
+              </p>
             </div>
           </div>
 

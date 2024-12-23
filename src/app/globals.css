@@ -68,8 +68,7 @@ section {
   height: 100vh;
 }
 .hero .img {
-  width: 50%;
-  aspect-ratio: 1;
+  /* object-fit: contain;/ */
 }
 
 .footer {
@@ -118,12 +117,13 @@ section {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 2px solid #fff;
   border-radius: 100%;
   overflow: hidden;
-  transform: scale(0);
+  /* transform: scale(0); */
+  background-color: #fff;
 }
 
 .copy {
