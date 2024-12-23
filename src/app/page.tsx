@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 import Image from "next/image";
+import ReactKakaoMap from "./components/ReactKakaoMap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,7 +100,7 @@ export default function Home() {
 
     gsap.to(".logo", {
       scale: 1,
-      duration: 0.5,
+      duration: 0.8,
       ease: "power1.out",
       scrollTrigger: ScrollTriggerSettings,
     });
@@ -108,7 +108,7 @@ export default function Home() {
     gsap.to(".line p", {
       y: 0,
       stagger: 0.1,
-      duration: 0.5,
+      duration: 0.8,
       ease: "power1.out",
       scrollTrigger: ScrollTriggerSettings,
     });
@@ -117,7 +117,7 @@ export default function Home() {
       y: 0,
       opacity: 1,
       stagger: 0.25,
-      duration: 0.5,
+      duration: 0.8,
       ease: "power1.out",
       scrollTrigger: ScrollTriggerSettings,
     });
@@ -197,6 +197,8 @@ export default function Home() {
       </section>
 
       <section className="footer">
+        <h1>찾아오는 방법!</h1>
+        <ReactKakaoMap />
         <div className="btn">
           <button onClick={handleButton}>문의하기</button>
         </div>
