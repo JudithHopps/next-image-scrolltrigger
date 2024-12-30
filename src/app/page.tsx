@@ -172,10 +172,10 @@ export default function Home() {
 
           <div className="copy">
             <div className="line">
-              <p>
-                후라이를 한 번 팔아볼까...?{" "}
-                <span className="text-brown">연탄불에 후라이!</span>
-              </p>
+              <p>후라이를 한 번 팔아볼까...? </p>
+            </div>
+            <div className="line">
+              <p className="text-brown">연탄불에 후라이!</p>
             </div>
             <div className="line">
               <p>

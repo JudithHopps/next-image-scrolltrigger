@@ -72,6 +72,7 @@ section {
 }
 
 .footer {
+  margin-top: 36px;
   height: 50vh;
   align-items: flex-start;
   display: flex;
@@ -175,6 +176,10 @@ button {
   .card {
     width: 50%;
     height: 240px;
+  }
+
+  .line {
+    font-size: 16px;
   }
 }
 
